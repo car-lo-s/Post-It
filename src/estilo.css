@@ -1,0 +1,409 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+.tela {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  background-color: #e7e7e7;
+  background-image: url('./assets/foco.png');
+  background-size: cover;
+  
+}
+
+.mesa {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+.telaLogin{
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 600px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.telaEfeito{
+  background-color: red;
+}
+.telaLogin h1{
+  position: absolute;
+  top: 80px;
+   font-family: "Libertinus Keyboard", system-ui;
+  font-weight: 400;
+  font-size: 35px;
+}
+.telaLogin div{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.telaLogin div input{
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px 10px;
+  font-size: 17px;
+  border: 2px solid #c3c4c5;
+  border-radius: 5px;
+}
+.telaLogin div button{
+  padding: 20px;
+  cursor: pointer;
+  background-color: #3a4059;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  transition: all .5s ease;
+}
+.telaLogin div button:hover{
+  background-color: #2b3044;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.mesaMenu {
+  width: 400px;
+  height: 100%;
+  position: relative;
+  background-color: white;
+}
+
+.mesaMenu h1 {
+  font-size: 30px;
+  padding: 50px 0px 50px 50px;
+}
+
+.mesaMenu h2 {
+  color: #8e939a;
+  padding-left: 50px;
+}
+
+.prioridade div {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.prioridade div p {
+  padding: 5px 15px;
+  border-radius: 25px;
+  margin-right: 5px;
+  margin-top: 15px;
+}
+
+.prioridade div p:nth-child(1) {
+  color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.prioridade div p:nth-child(2) {
+  color: #967000;
+  background-color: #fff3cd;
+}
+
+.prioridade div p:nth-child(3) {
+  color: #198754;
+  background-color: #d1e7dd;
+}
+
+/* ---- Toggle Switch ---- */
+.filtros {
+  padding-left: 50px;
+  margin-top: 30px;
+}
+.filtros div{
+  display: flex;
+  align-items: end;
+}
+.filtros div p{
+  margin-left: 10px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ddd;
+  border-radius: 25px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* ---- Card de usuário ---- */
+.usuarioCard {
+  height: 100px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  border-top: 2px solid lightblue;
+}
+
+.usuarioCard div:first-child {
+  height: 55px;
+  width: 55px;
+  border-radius: 100%;
+  margin-right: 15px;
+  background-image: url("./assets/avatar.png");
+  background-size: cover;
+}
+.voltar{
+  width: 30px ;
+  height: 30px ;
+  background-image: url('./assets/voltar.svg');
+  background-size: cover;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  cursor: pointer;
+  border-radius: 20%;
+  padding: 10px;
+  transition: all .5s ease;
+}
+.voltar:hover{
+  background-color: #1b80ce;
+  opacity: 0.5;
+}
+/* ---- Área principal ---- */
+.mesaCards {
+  height: 100%;
+  background-color: #f9fafc;
+  flex: 1;
+  background-image: radial-gradient(#bfbfbf 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.mesaPesquisa {
+  background-color: #f3f4f6;
+  min-height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.novoCard{
+  margin-right: 10px;
+  font-size: 25px;
+  background-color: #e5e7ea;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px;
+  background-image: url('./assets//plus.svg');
+  background-size: cover;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.novoCard:hover{
+  background-color: #c0c0c0;
+  box-shadow:  2px 2px 5px #cccccc;
+}
+.boxPesquisa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  min-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px rgb(226, 226, 226);
+  height: 50px;
+  justify-content: center;
+}
+
+.btnPesquisa {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btnPesquisa img {
+  width: 50%;
+}
+
+.boxPesquisa input {
+  border: none;
+  width: 90%;
+  outline: none;
+  height: 100%;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.tamanhoTela {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 50px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px rgb(226, 226, 226);
+  width: 150px;
+  font-size: 25px;
+  justify-content: space-around;
+  cursor: pointer;
+  user-select: none;
+}
+.quadroBranco{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card {
+  width: 300px;
+  height: 200px;
+  min-height: 120px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #8e939a;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+}
+
+.titulo {
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+.texto {
+  color: #838383;
+}
+
+.marcador {
+  position: absolute;
+  bottom: 10px;
+}
+
+.linha {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: #dc3545; */
+  width: 100%;
+  height: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+.vermelho{
+  background-color: #dc3545;
+}
+.amarelo{
+  background-color: #967000;
+}
+.verde{
+  background-color: #198754;
+}
+.novoCartao{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  min-width: 500px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #838383;
+}
+.novoCartao div{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.novoCartao input{
+  outline: none;
+  padding: 5px;
+}
+.novoCartao div:nth-child(4){
+  margin-top: 20px;
+  display: flex;
+}
+.novoCartao button{
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.novoCartao button:hover{
+  background-color: #bfbfbf;
+}
+.close{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 25px !important;
+  height: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url('./assets//close.svg');
+  background-size: cover;
+  transition: all .4s ease;
+}
+.close:hover{
+  background-color: #dc3545;
+}
